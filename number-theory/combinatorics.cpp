@@ -2,7 +2,8 @@
 
 using namespace std;
 
-const int MOD = 998244353;
+const int MOD = 1e9 + 7;
+const int MOD1 = 998244353;
 
 int fact(int n) {
     int res = 1;
