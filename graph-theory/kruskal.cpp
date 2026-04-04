@@ -18,6 +18,7 @@ struct DSU {
 };
 
 int kruskal(int n, vector<array<int, 3>>& edges) {
+    // MST (min)
     sort(edges.begin(), edges.end(), [&](auto& i, auto& j) {
         return i[2] < j[2];
     });
