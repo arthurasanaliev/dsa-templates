@@ -1,4 +1,7 @@
 main.cpp
+main.py
 main
 .vscode
 bits
+.python-version
+pyproject.toml
