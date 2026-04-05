@@ -11,6 +11,6 @@ bool is_square(int n) {
 }
 
 int range_sum(int f, int t) {
-    // [f, t] range sum
+    // Returns [f, t] range sum
     return (t - f + 1) * (f + t) / 2;
 }
