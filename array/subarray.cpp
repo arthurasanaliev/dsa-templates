@@ -4,6 +4,7 @@ using namespace std;
 
 vector<int> split_equally(vector<int>& a) {
     // Returns all `parts` where `parts` is no of equal-sum subarrays
+    // from: KRSU Online Judge - Цепочка для многоугольника (7897)
     int n = a.size();
     int tot = accumulate(a.begin(), a.end(), 0);
     vector<int> pref(n);
