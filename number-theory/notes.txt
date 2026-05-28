@@ -1,5 +1,0 @@
-The number of factors of an integer
-1. For n <= 1e4, max f(n) <= 64
-3. For n <= 1e5, max f(n) <= 128
-5. For n <= 1e6, max f(n) <= 240
-6. For n <= 1e7, max f(n) <= 448
