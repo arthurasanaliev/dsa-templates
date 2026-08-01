@@ -5,3 +5,4 @@ main
 bits
 .python-version
 pyproject.toml
+build.txt
