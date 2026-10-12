@@ -25,3 +25,8 @@ void next_perm(vector<int>& a) {
         cout << '\n';
     } while (next_permutation(a.begin(), a.end()));
 }
+
+void make_unique(vector<int>& a) {
+    sort(a.begin(), a.end());
+    a.erase(unique(a.begin(), a.end()), a.end());
+}
