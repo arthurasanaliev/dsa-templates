@@ -10,6 +10,12 @@ bool is_square(int n) {
     return x * x == n;
 }
 
+int square_root(int n) {
+    int x = (int)sqrtl(n) + 1;
+    while (x * x > n) x--;
+    return x;
+}
+
 int range_sum(int f, int t) {
     // Returns [f, t] range sum
     return (t - f + 1) * (f + t) / 2;
