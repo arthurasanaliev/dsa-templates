@@ -17,3 +17,11 @@ int mex(vector<int>& v) {
     }
     return 0;
 }
+
+void next_perm(vector<int>& a) {
+    sort(a.begin(), a.end());
+    do {
+        for (int x : a) cout << x << ' ';
+        cout << '\n';
+    } while (next_permutation(a.begin(), a.end()));
+}
