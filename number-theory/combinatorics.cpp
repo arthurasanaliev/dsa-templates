@@ -56,6 +56,12 @@ int stars_and_bars_empty(int n, int k) {
     return comb(n + k - 1, k - 1);
 }
 
+int stars_and_bars_at_least(int n, int k, int c) {
+    // n items into k bins, each >= c e.g. n=7, k=3, c=2 -> 3
+    if (k <= 0 || n < k * c) return 0;
+    return comb((n - k * c) + k - 1, k - 1);
+}
+
 int catalan(int n) {
     // balanced brackets, triangulations, binary trees e.g. n=3 -> 5
     if (n < 0) return 0;
