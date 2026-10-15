@@ -6,3 +6,5 @@ bits
 .python-version
 pyproject.toml
 build.txt
+input.in
+output.out
