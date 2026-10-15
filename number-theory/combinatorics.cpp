@@ -55,3 +55,9 @@ int stars_and_bars_empty(int n, int k) {
     if (k <= 0 || n < 0) return 0;
     return comb(n + k - 1, k - 1);
 }
+
+int catalan(int n) {
+    // balanced brackets, triangulations, binary trees e.g. n=3 -> 5
+    if (n < 0) return 0;
+    return comb(2 * n, n) * inv(n + 1) % MOD;
+}
