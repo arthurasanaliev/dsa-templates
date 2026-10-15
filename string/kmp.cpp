@@ -5,7 +5,7 @@ using namespace std;
 vector<int> prefix_function(string s) {
     // used in KMP algorithm:
     // pass pattern + # + text; then check if pi[i] == len(pattern)
-    int n = (int)s.length();
+    int n = s.size();
     vector<int> pi(n);
     for (int i = 1; i < n; i++) {
         int j = pi[i - 1];
