@@ -33,6 +33,11 @@ int comb(int a, int b) {
     return fact(a) * inv(fact(b) * fact(a - b) % MOD) % MOD;
 }
 
+int perm(int n, int k) {
+    if (k < 0 || k > n) return 0;
+    return fact(n) * inv(fact(n - k)) % MOD;
+}
+
 int compositions(int n) {
     // compositions of an integer e.g. n=3 -> [1,1,1],[1,2],[2,1],[3]
     if (n <= 0) return 0;
