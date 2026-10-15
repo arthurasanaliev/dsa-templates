@@ -61,3 +61,16 @@ int catalan(int n) {
     if (n < 0) return 0;
     return comb(2 * n, n) * inv(n + 1) % MOD;
 }
+
+int derangements(int n) {
+    // permutations with no fixed points e.g. n=3 -> [2,3,1],[3,1,2]
+    if (n == 0) return 1;
+    if (n == 1) return 0;
+    int prev2 = 1, prev1 = 0;
+    for (int i = 2; i <= n; i++) {
+        int cur = (i - 1) * (prev1 + prev2) % MOD;
+        prev2 = prev1;
+        prev1 = cur;
+    }
+    return prev1;
+}
