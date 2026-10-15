@@ -38,3 +38,15 @@ int compositions(int n) {
     if (n <= 0) return 0;
     return binpow(2, n - 1);
 }
+
+int stars_and_bars_non_empty(int n, int k) {
+    // n items into k bins, each >= 1 e.g. n=3, k=2 -> [1,2],[2,1]
+    if (k <= 0 || n < k) return 0;
+    return comb(n - 1, k - 1);
+}
+
+int stars_and_bars_empty(int n, int k) {
+    // n items into k bins, each >= 0 e.g. n=2, k=2 -> [0,2],[1,1],[2,0]
+    if (k <= 0 || n < 0) return 0;
+    return comb(n + k - 1, k - 1);
+}
