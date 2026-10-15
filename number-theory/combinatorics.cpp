@@ -32,3 +32,9 @@ int comb(int a, int b) {
     if (b < 0 || b > a) return 0;
     return fact(a) * inv(fact(b) * fact(a - b) % MOD) % MOD;
 }
+
+int compositions(int n) {
+    // compositions of an integer e.g. n=3 -> [1,1,1],[1,2],[2,1],[3]
+    if (n <= 0) return 0;
+    return binpow(2, n - 1);
+}
